@@ -1,60 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Santiago Arcila LLC</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Santiago Arcila LLC | M&A Advisory</title>
+
+<style>
+  body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f3;
+    color:#111;
+  }
+
+  header{
+    position:sticky;
+    top:0;
+    background:#f5f5f3ee;
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid #ddd;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .logo{font-weight:bold}
+  .nav a{margin-left:20px; text-decoration:none; color:#333}
+
+  .hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    padding:80px 30px;
+    max-width:1100px;
+    margin:auto;
+  }
+
+  h1{font-size:48px; margin:0}
+  h2{font-size:28px}
+  p{color:#444; line-height:1.6}
+
+  .btn{
+    display:inline-block;
+    padding:12px 22px;
+    margin-top:20px;
+    border-radius:30px;
+    text-decoration:none;
+    cursor:pointer;
+  }
+
+  .btn-primary{background:#000; color:#fff}
+  .btn-secondary{border:1px solid #ccc; color:#000}
+
+  .section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 30px;
+  }
+
+  .grid3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+
+  .card{
+    background:white;
+    padding:20px;
+    border-radius:16px;
+    border:1px solid #eee;
+  }
+
+  input, textarea, select{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+  }
+
+  .form-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #eee;
+  }
+
+  .faq-item{
+    background:white;
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:12px;
+    cursor:pointer;
+    border:1px solid #eee;
+  }
+
+  .faq-answer{
+    display:none;
+    padding-top:10px;
+    color:#555;
+  }
+
+  .sticky-cta{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#000;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:30px;
+    cursor:pointer;
+  }
+
+  @media(max-width:800px){
+    .hero{grid-template-columns:1fr}
+    .grid3{grid-template-columns:1fr}
+  }
+</style>
 </head>
 
-<body class="bg-[#f5f5f3] text-neutral-900 font-sans">
+<body>
 
-<header class="p-6 border-b">
-  <h1 class="text-xl font-bold">Santiago Arcila LLC</h1>
-  <p class="text-sm text-gray-500">M&A Advisory</p>
+<header>
+  <div class="logo">Santiago Arcila LLC</div>
+  <div class="nav">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
-<section class="p-10">
-  <h2 class="text-4xl font-bold">Sell your business with confidence</h2>
-  <p class="mt-4 text-gray-600 max-w-xl">
-    Structured M&A advisory for mid-market businesses. Confidential, competitive, and execution-driven.
-  </p>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Sell your business<br/>with precision.</h1>
+    <p>
+      We structure, package, and run competitive buyer processes to maximize valuation,
+      control timing, and reduce execution risk.
+    </p>
 
-  <div class="mt-6 flex gap-4">
-    <a href="#contact" class="bg-black text-white px-6 py-3 rounded-full">
-      Request Valuation
-    </a>
-    <a href="#process" class="border px-6 py-3 rounded-full">
-      View Process
-    </a>
+    <a class="btn btn-primary" href="#contact">Request Confidential Valuation</a>
+    <a class="btn btn-secondary" href="#process">Explore Process</a>
+  </div>
+
+  <div class="card">
+    <h2>Deal Snapshot</h2>
+    <p><b>$1M – $25M EBITDA</b></p>
+    <p>60–120 days to LOI</p>
+    <p>PE · Strategic · Family Offices</p>
+    <p>Confidential Mandates Only</p>
   </div>
 </section>
 
-<section id="process" class="p-10 bg-white border-t">
-  <h3 class="text-2xl font-bold mb-4">Process</h3>
-  <ul class="space-y-2 text-gray-600">
-    <li>1. Confidential review</li>
-    <li>2. Valuation range</li>
-    <li>3. CIM preparation</li>
-    <li>4. Buyer outreach</li>
-    <li>5. LOI & closing</li>
-  </ul>
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Sell-Side Advisory Services</h2>
+
+  <div class="grid3">
+    <div class="card">
+      <h3>Buyer Process Execution</h3>
+      <p>Structured outreach to qualified acquirers globally.</p>
+    </div>
+
+    <div class="card">
+      <h3>Deal Preparation</h3>
+      <p>CIM creation, financial normalization, positioning.</p>
+    </div>
+
+    <div class="card">
+      <h3>Transaction Management</h3>
+      <p>LOI negotiation through closing execution.</p>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="p-10 border-t">
-  <h3 class="text-2xl font-bold mb-4">Confidential Inquiry</h3>
+<!-- PROCESS -->
+<section id="process" class="section">
+  <h2>Process</h2>
+  <div class="card">
+    <p>1. Confidential review</p>
+    <p>2. Valuation range</p>
+    <p>3. CIM preparation</p>
+    <p>4. Buyer outreach</p>
+    <p>5. LOI negotiation</p>
+    <p>6. Closing</p>
+  </div>
+</section>
 
-  <form class="space-y-3 max-w-md">
-    <input class="w-full border p-3 rounded" placeholder="Company name">
-    <input class="w-full border p-3 rounded" placeholder="Revenue">
-    <input class="w-full border p-3 rounded" placeholder="EBITDA">
-    <textarea class="w-full border p-3 rounded" placeholder="Reason for sale"></textarea>
+<!-- CONTACT / FORM -->
+<section id="contact" class="section">
+  <h2>Request Confidential Valuation</h2>
 
-    <button class="bg-black text-white px-6 py-3 rounded-full w-full">
-      Submit
+  <div class="form-box">
+    <input id="company" placeholder="Company Name"/>
+    <input id="revenue" placeholder="Revenue (USD)"/>
+    <input id="ebitda" placeholder="EBITDA (USD)"/>
+    <textarea id="reason" placeholder="Reason for sale"></textarea>
+
+    <button class="btn btn-primary" onclick="submitForm()">
+      Submit & Evaluate
     </button>
-  </form>
+
+    <p id="result" style="margin-top:15px;"></p>
+  </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+
+  <div class="faq-item" onclick="toggle(this)">
+    What can I expect from the process?
+    <div class="faq-answer">Structured M&A process designed for competitive outcomes.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggle(this)">
+    How is valuation determined?
+    <div class="faq-answer">Based on EBITDA multiples, growth, and market comparables.</div>
+  </div>
+
+  <div class="faq-item" onclick="toggle(this)">
+    Is confidentiality guaranteed?
+    <div class="faq-answer">Yes. All submissions are strictly confidential.</div>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" onclick="document.getElementById('contact').scrollIntoView()">
+  Request Valuation
+</div>
+
+<script>
+function toggle(el){
+  const ans = el.querySelector(".faq-answer");
+  ans.style.display = ans.style.display === "block" ? "none" : "block";
+}
+
+// SIMPLE DEAL SCORING ENGINE
+function submitForm(){
+  let revenue = parseFloat(document.getElementById("revenue").value) || 0;
+  let ebitda = parseFloat(document.getElementById("ebitda").value) || 0;
+
+  let score = 0;
+
+  if(revenue > 1000000) score += 40;
+  if(ebitda > 500000) score += 40;
+  if(ebitda > 2000000) score += 20;
+
+  let result = document.getElementById("result");
+
+  // Save lead locally (mini CRM)
+  let lead = {
+    company: document.getElementById("company").value,
+    revenue,
+    ebitda,
+    reason: document.getElementById("reason").value,
+    score
+  };
+
+  localStorage.setItem("lead", JSON.stringify(lead));
+
+  if(score >= 70){
+    result.innerHTML = "Qualified Lead → Redirecting to confidential scheduling...";
+    
+    setTimeout(()=>{
+      window.location.href = "https://calendly.com/";
+    }, 1500);
+
+  } else {
+    result.innerHTML = "We will review your submission confidentially.";
+  }
+}
+</script>
 
 </body>
 </html>
