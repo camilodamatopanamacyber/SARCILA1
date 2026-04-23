@@ -5,18 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Santiago Arcila LLC | M&A Advisory</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#f6f4ef;
-  --black:#0e0e0e;
-  --muted:#6b6b6b;
-  --gold:#b89b5e;
+  --bg:#f4f1ea;
+  --ink:#101010;
+  --muted:#6f6a63;
+  --line:#e6dfd2;
+  --accent:#a88a4a;
   --card:#ffffff;
-  --border:#e7e2d8;
 }
 
 *{box-sizing:border-box}
@@ -25,17 +23,17 @@ body{
   margin:0;
   font-family:Inter, sans-serif;
   background:var(--bg);
-  color:var(--black);
+  color:var(--ink);
 }
 
-/* HEADER */
+/* TOP NAV */
 header{
   position:sticky;
   top:0;
-  background:rgba(246,244,239,0.85);
-  backdrop-filter: blur(12px);
-  border-bottom:1px solid var(--border);
-  padding:18px 40px;
+  background:rgba(244,241,234,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+  padding:20px 48px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -44,149 +42,156 @@ header{
 
 .logo{
   font-weight:600;
-  letter-spacing:0.5px;
+  letter-spacing:0.3px;
 }
 
 nav a{
   margin-left:22px;
+  font-size:13px;
   text-decoration:none;
   color:var(--muted);
-  font-size:14px;
 }
 
-nav a:hover{color:var(--black)}
+nav a:hover{color:var(--ink)}
 
 /* HERO */
 .hero{
-  max-width:1200px;
+  max-width:1150px;
   margin:auto;
-  padding:110px 40px 80px;
+  padding:110px 48px 80px;
   display:grid;
-  grid-template-columns:1.2fr 0.8fr;
-  gap:60px;
+  grid-template-columns:1.3fr 0.7fr;
+  gap:70px;
 }
 
-.badge{
-  display:inline-block;
+.kicker{
   font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:18px;
+  color:var(--accent);
 }
 
 h1{
-  font-size:56px;
+  font-size:62px;
   line-height:1.05;
-  margin:0;
+  margin:18px 0;
+  font-weight:600;
 }
 
 .sub{
-  margin-top:22px;
-  color:var(--muted);
   font-size:18px;
-  line-height:1.6;
+  color:var(--muted);
+  line-height:1.7;
+  max-width:520px;
 }
 
-.cta-row{
-  margin-top:30px;
+/* BUTTONS */
+.actions{
+  margin-top:32px;
   display:flex;
-  gap:14px;
+  gap:12px;
   flex-wrap:wrap;
 }
 
 .btn{
   padding:12px 18px;
   border-radius:999px;
+  font-size:13px;
   text-decoration:none;
-  font-size:14px;
-  font-weight:500;
-  transition:0.2s;
   display:inline-block;
+  font-weight:500;
 }
 
-.btn-primary{
-  background:var(--black);
+.primary{
+  background:var(--ink);
   color:white;
 }
 
-.btn-primary:hover{opacity:0.85}
-
-.btn-outline{
-  border:1px solid var(--border);
-  color:var(--black);
+.secondary{
+  border:1px solid var(--line);
+  color:var(--ink);
+  background:transparent;
 }
 
-.btn-outline:hover{
-  border-color:var(--black);
-}
-
-.btn-green{
+.whatsapp{
   background:#25D366;
   color:white;
 }
 
 /* CARD */
-.card{
+.panel{
   background:var(--card);
-  border:1px solid var(--border);
+  border:1px solid var(--line);
   border-radius:18px;
   padding:26px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.04);
 }
 
-.card h3{
-  margin-top:0;
-  font-size:16px;
-  letter-spacing:1px;
+.panel h3{
+  margin:0 0 14px;
+  font-size:12px;
+  letter-spacing:2px;
   text-transform:uppercase;
-  color:var(--gold);
+  color:var(--accent);
 }
 
 .metric{
-  margin-top:14px;
+  padding:10px 0;
+  border-bottom:1px solid #f0ece4;
   font-size:14px;
   color:var(--muted);
 }
 
-/* SECTIONS */
+.metric b{color:var(--ink)}
+
+/* SECTION */
 .section{
-  max-width:1200px;
+  max-width:1150px;
   margin:auto;
-  padding:80px 40px;
+  padding:80px 48px;
 }
 
 h2{
-  font-size:28px;
-  margin-bottom:30px;
+  font-size:26px;
+  font-weight:600;
+  margin-bottom:26px;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
 
-.small{
-  font-size:14px;
+.card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+}
+
+.card h4{
+  margin:0 0 10px;
+  font-size:15px;
+}
+
+.card p{
+  font-size:13px;
   color:var(--muted);
   line-height:1.6;
 }
 
 /* PROCESS */
-.process{
-  background:#0e0e0e;
+.dark{
+  background:#0f0f0f;
   color:white;
-  padding:90px 40px;
+  padding:90px 48px;
 }
 
-.process h2{color:white}
-
-.step{
+.dark .step{
   border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:18px 0;
-  color:#d7d7d7;
+  padding:14px 0;
+  color:#cfcfcf;
 }
 
 /* FORM */
@@ -197,19 +202,18 @@ form{
 
 input,textarea{
   padding:12px 14px;
+  border:1px solid var(--line);
   border-radius:12px;
-  border:1px solid var(--border);
   font-family:inherit;
-  font-size:14px;
-  background:white;
+  font-size:13px;
 }
 
 textarea{min-height:110px}
 
-/* FOOT CTA */
-.sticky{
+/* FLOAT CTA */
+.float{
   position:fixed;
-  right:20px;
+  right:18px;
   padding:12px 14px;
   border-radius:999px;
   font-size:13px;
@@ -217,25 +221,15 @@ textarea{min-height:110px}
   z-index:999;
 }
 
-.whatsapp{
-  bottom:80px;
-  background:#25D366;
-  color:white;
-}
-
-.primary{
-  bottom:20px;
-  background:var(--black);
-  color:white;
-}
+.wapp{bottom:80px;background:#25D366;color:white}
+.cta{bottom:20px;background:var(--ink);color:white}
 
 /* MOBILE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr}
-  h1{font-size:40px}
+  h1{font-size:42px}
   .grid{grid-template-columns:1fr}
-  header{padding:16px 20px}
-  .section{padding:60px 20px}
+  header{padding:18px 20px}
 }
 </style>
 </head>
@@ -255,64 +249,67 @@ textarea{min-height:110px}
 <section class="hero">
 
   <div>
-    <div class="badge">M&A Advisory • Sell-Side Mandates</div>
+    <div class="kicker">Sell-Side M&A Advisory</div>
 
-    <h1>Sell your business<br/>with institutional precision.</h1>
+    <h1>Institutional execution<br/>for mid-market exits.</h1>
 
     <p class="sub">
-      We structure, package, and run competitive buyer processes to maximize valuation,
-      control timing, and reduce execution risk across mid-market transactions.
+      We structure and run competitive M&A processes designed to maximize valuation,
+      control timing, and reduce execution risk across cross-border transactions.
     </p>
 
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#contact">Request Confidential Valuation</a>
-      <a class="btn btn-outline" href="https://calendly.com/" target="_blank">Schedule Call</a>
-      <a class="btn btn-green" href="https://wa.me/18132109135" target="_blank">WhatsApp</a>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Request Confidential Valuation</a>
+      <a class="btn secondary" href="https://calendly.com/" target="_blank">Schedule Call</a>
+      <a class="btn whatsapp" href="https://wa.me/18132109135" target="_blank">WhatsApp</a>
     </div>
   </div>
 
-  <div class="card">
-    <h3>Deal Snapshot</h3>
+  <div class="panel">
+    <h3>Transaction Profile</h3>
 
     <div class="metric"><b>$1M – $25M EBITDA</b></div>
-    <div class="metric">60–120 days to LOI</div>
-    <div class="metric">Private Equity · Strategic · Family Offices</div>
-    <div class="metric">Confidential Mandates Only</div>
-    <div class="metric">Cross-border execution (US / LATAM / EU)</div>
+    <div class="metric">60–120 day average to LOI</div>
+    <div class="metric">Private Equity / Strategic / Family Offices</div>
+    <div class="metric">Cross-border (US · LATAM · Europe)</div>
+    <div class="metric">Confidential mandate only</div>
   </div>
 
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-<h2>Sell-Side Advisory Services</h2>
+
+<h2>Advisory Coverage</h2>
 
 <div class="grid">
 
   <div class="card">
-    <h3>Buyer Process Execution</h3>
-    <p class="small">Targeted outreach to qualified global acquirers with structured competition.</p>
+    <h4>Buyer Process Design</h4>
+    <p>Structured competitive outreach to qualified global acquirers.</p>
   </div>
 
   <div class="card">
-    <h3>Deal Preparation</h3>
-    <p class="small">CIM development, financial normalization, and investment positioning.</p>
+    <h4>Investment Packaging</h4>
+    <p>CIM creation, financial normalization, and positioning strategy.</p>
   </div>
 
   <div class="card">
-    <h3>Transaction Management</h3>
-    <p class="small">From LOI negotiation through diligence and closing.</p>
+    <h4>Deal Execution</h4>
+    <p>LOI negotiation, diligence coordination, and closing management.</p>
   </div>
 
 </div>
+
 </section>
 
 <!-- PROCESS -->
-<section class="process" id="process">
-<h2>Execution Process</h2>
+<section class="dark">
+
+<h2>Execution Framework</h2>
 
 <div class="step">1. Confidential review</div>
-<div class="step">2. Valuation range</div>
+<div class="step">2. Valuation positioning</div>
 <div class="step">3. CIM preparation</div>
 <div class="step">4. Buyer outreach</div>
 <div class="step">5. LOI negotiation</div>
@@ -322,7 +319,8 @@ textarea{min-height:110px}
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-<h2>Confidential Valuation Request</h2>
+
+<h2>Confidential Engagement</h2>
 
 <div class="card">
 
@@ -333,7 +331,7 @@ textarea{min-height:110px}
 <input name="ebitda" placeholder="EBITDA (USD)">
 <textarea name="reason" placeholder="Reason for sale"></textarea>
 
-<button class="btn btn-primary" type="submit">
+<button class="btn primary" type="submit">
 Submit Confidential Request
 </button>
 
@@ -343,17 +341,16 @@ Submit Confidential Request
 
 </section>
 
-<!-- STICKY BUTTONS -->
-<div class="sticky whatsapp"
+<!-- FLOATING CTA -->
+<div class="float wapp"
 onclick="window.open('https://wa.me/18132109135','_blank')">
 WhatsApp
 </div>
 
-<div class="sticky primary"
+<div class="float cta"
 onclick="document.getElementById('contact').scrollIntoView()">
 Request Valuation
 </div>
 
 </body>
 </html>
-<!-- force redeploy -->
